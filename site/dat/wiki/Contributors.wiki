@@ -15,4 +15,7 @@ Everyone who provided pull request or other contribution, deserves mentioning on
   * Vincent Daburon and Felix Henry - [HttpSimpleTableServer], [SynthesisReport], [MergeResults], temporal and regex filters
   * Sergey Marakhov and Linh Pham - Android Driver Config
   * Bakir Jusufbegovic and Semir Sabic / AtlantBH - a lot of components
-  * Luc Van Hoeylandt - vanhoeyl AT amplidata.com - Added latency to first body byte to HttpRawSampler
+<<<<<<< HEAD
+  * Jorge S. Cruz - added [RemoteDriverConfig] for connecting to a Selenium Grid
+  * Roy de Kleijn - added NTLM and Internet Explorer support
+>>>>>>> d49545054fd16a52a628b6a90663bb86512b9889
