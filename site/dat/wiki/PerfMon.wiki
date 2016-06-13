@@ -47,10 +47,15 @@ running the test you may load saved file into GUI and see the values timeline.
 
 ==JMeter Properties==
 
-  * jmeterPlugin.perfmon.interval - metrics collection interval in milliseconds
-  * jmeterPlugin.perfmon.useUDP - true/false, enabling UDP connection try after failed TCP connection attempt
+  * {{{jmeterPlugin.perfmon.interval}}} - metrics collection interval in milliseconds
+  * {{{jmeterPlugin.perfmon.useUDP}}} - true/false, enabling UDP connection try after failed TCP connection attempt
+  * {{{jmeterPlugin.perfmon.label.useHostname}}} - true/false, enable using "short" hostnames, default pattern is {{{ ([\w\-]+)\..* }}}
+  * {{{jmeterPlugin.perfmon.label.useHostname.pattern}}} - string (escaped), regular expression to extract hostname (first group is matched)
+    * e.g. Default pattern would be: {{{ jmeterPlugin.perfmon.label.useHostname.pattern=([\\w\\-]+)\\..* }}}
+    * e.g. Pattern for EC2 us-east/west subdomain matching: {{{ jmeterPlugin.perfmon.label.useHostname.pattern=([\w\-]+\.us-(east|west)-[0-9]).* }}}
+  * {{{forcePerfmonFile}}} - true/false, enabling it makes JMeter to write JTL file with perfmon metrics in the current directory
 
 == Seeing PerfMon Data Online ==
 
-There is a feature on [http://loadosophia.org/?utm_source=jpgc&utm_medium=wiki&utm_campaign=PerfMon Loadosophia.org] to see PerfMon collected data in a fancy Web interface.
-[https://loadosophia.org/examples/62562/?utm_source=jpgc&utm_medium=wiki&utm_campaign=PerfMon#tab=4 Here's an example].
+There is a feature on [https://sense.blazemeter.com/?utm_source=jpgc&utm_medium=wiki&utm_campaign=PerfMon BM.Sense] to see PerfMon collected data in a fancy Web interface.
+[https://sense.blazemeter.com/examples/489029/?utm_source=jpgc&utm_medium=wiki&utm_campaign=PerfMon#tab=tabMonitoring Here's an example].

@@ -1,28 +1,90 @@
 = Changelog =
 
-== 1.2.1 <i><font color=gray size="1">planning</font></i>==
+== 2.0 <i><font color=gray size="1">planning</font></i>==
+  * all plugin sets are broken up into tens of smaller plugins to be used with Plugins Manager
+  * prevent NPEs from sense uploader
+  * sense uploader is extracted as separate plugin for pmgr
+  * perfmon is extracted as separate plugin for pmgr
+  * json components are extracted as separate module for pmgr
+  * hadoop set won't be distributed as zip anymore
+
+== 1.4.0 <i><font color=gray size="1">April 5, 2016</font></i>==
+  * BlazeMeter Inc. has contributed [XMPPSet XMPP testing plugins]
+  * BlazeMeter Inc. has contributed [PhantomJSDriverConfig PhantomJS support] for WebDriver
+  * BlazeMeter Inc. has contributed few Thread Groups and Controllers into [StandardSet Standard Set]
+  * [LoadosophiaUploader Loadosophia Uploader] has been renamed to BM.Sense uploader
+  * finally [LoadosophiaUploader Loadosophia Uploader] works well with distributed tests
+  * add 2 text fields in PhantomJS WebDriver GUI for phantomjs.cli.args and phantomjs.ghostdriver.args parameters, see [http://jmeter-plugins.org/wiki/PhantomJSDriverConfig/]
+  * Modernize project website, change its look a bit
+  * fix consequences of PR #80 further
+  * make [DummySampler Dummy Sampler] compatible with JMeter 2.12 and earlier
+  * add [Functions custom functions] strReplace and strReplaceRegex (thanks to Dima Lulko for suggesting)
+  * add FilterResultsTool command line tool, filter results by label (regex), offset, success, output file XML or CSV format, see [http://jmeter-plugins.org/wiki/FilterResultsTool/]
+  * change HttpSimpleTableServer command ADD a new line for a file with GET (new) or POST protocols, see [http://jmeter-plugins.org/wiki/HttpSimpleTableServer/]
+  * change HttpSimpleTableServer no cache for Response, add headers cache control, pragma and expires
+  * Add fields to FFW: grpThreads, sampleCount, errorCount, responseHeaderSize, responseSize, URL
+  * upgrade JSONPath lib to 2.0.0 to not conflict with core JMeter 3.0, this breaks some cases because of the lib regression
+  * fix user agent override for Firefox not enabling the field in UI
+  * request clean session from IE webdriver
+  * upgrade selenium libraries to 2.52.0
+  * Added new option to allow delayed connection or reconnection feature to JMXMon
+
+== 1.3.1 <i><font color=gray size="1">October 12, 2015</font></i>==
+  * add connectTime field into Flexible File Writer
+  * add [ConnectTimeOverTime Connect Times Over Time] listener to Extras set
+  * use JMeter's encoding for converting strings to bytes in FFW
+  * fix scheduling bug in TST for sub-rps load
+  * fixed permission-denied-error on unix systems in LoadosophiaUploader-reporter when no storeDir is set
+  * bump up Selenium dependency to 2.47.0
+  * add basic PhantomJS (GhostDriver) capability to Remote WebDriver
+  * fix UTG broken by PR #80
+  * add Connect Time field to dummy sampler
+
+== 1.3.0 <i><font color=gray size="1">June 30, 2015</font></i>==
+  * Java 7 or higher required
+  * JMeter 2.12 or higher required
+  * Add SynthesisReport and AggregateReport generation to GraphGeneratorListener and allow generation of both CSV and PNG in one shot
+  * add script language selector to WebDriver Sampler
+  * WebDriver Sampler UI offers default script text
+  * change default of WebDriver sample type to SampleResult
+  * Selenium dependency version updated to 2.46.0
+  * fix {{{__substring}}} function (thanks to Dima Lulko for reporting)
+  * improve thread safety of FFW
+  * fix packaging, by mistake many sets were containing Standard Set classes inside
+  * add *not* switch to JSONPath Assertion (thanks to Dima Lulko for suggesting)
+  * make JSONPath Assertion to compare value as regexp
+  * fix reported issues with [JSONPathExtractor], see [https://groups.google.com/forum/#!topic/jmeter-plugins/fDqEpL3iqi0] and [https://groups.google.com/forum/#!topic/jmeter-plugins/UvKa5KiM2qo]
+  * SynthesisReportGui: the 90 percentile is now customizable with JMeter 2.13
+  * Make GraphRowSimple Serializable so that you can copy/paste graphs in JMeter
+  * Update maven-dependency-plugin to 2.8 and maven-shade-plugin to 2.1 as per [https://cwiki.apache.org/confluence/display/MAVEN/AetherClassNotFound]
+  * Add in multiple ColorsDispatcher classes (CycleColors, HueRotatePalette and CustomPalette). CycleColors is original implementation from 1.2.1
+  * Configurable hostname patterns for perfmon metrics (for cleaner charts)
+  * AggregateReportGui: Apply format to save csv file
+  * Make sure WebDriver sample results have timestamp on errors 
+  * UltimateThreadGroup: Added parametrization via _threads_schedule_ property
+  * Add 'description' column to Parameterized Controller
+  * deprecated [RESTSampler REST Sampler] dropped from the codebase
+  * Add {{{if}}} function
+  * Enable getting output logging from Developer Tool [https://sites.google.com/a/chromium.org/chromedriver/logging/performance-log]
+
+== 1.2.1 <i><font color=gray size="1">March 9, 2015</font></i>==
   * add [TestPlanCheckTool] to check JMX file consistency without running it
   * add requestHeaders field to FFW (and fix the bug with responseHeaders that nobody noticed)
-<<<<<<< HEAD
-  * add [JMXCheckerTool] to check JMX file consistency without running it
-=======
   * add webdriver.sampleresult_class property for [WebDriverSampler]
-  * Added Remote driver to the WebDriver plugins
+  * Added [RemoteDriverConfig Remote Driver] to the WebDriver plugins
   * add iterationNum function
   * add NTLM support for [FirefoxDriverConfig Firefox]
   * add ability to load extensions and set preferences for [FirefoxDriverConfig Firefox]
   * add [InternetExplorerConfig Internet Explorer Driver]
-  * rework internals of [JSONPathAssertion JSON Path Assertion], handle arrays and null values
-  * rework internals of [JSONPathExtractor JSON Path Extractor], handle arrays and null values
-
-  * ??? Maybe add real-time RPS changing to [VariableThroughputTimer Throughput Shaping Timer]???
-
->>>>>>> d49545054fd16a52a628b6a90663bb86512b9889
+  * rework internals of [JSONPathAssertion JSON Path Assertion] and [JSONPathExtractor JSON Path Extractor], handle arrays and null values
+  * add operation on variables into [JSONPathExtractor JSON Path Extractor]
+  * maximize browser window by default in WebDriver
+  * add two ways to change color of graph lines and legend.  See [SettingsPanel] for doc.
 
 == 1.2.0 <i><font color=gray size="1">September 16, 2014</font></i>==
   * fix JMeter startup with Extras (https://groups.google.com/forum/#!topic/jmeter-plugins/YlnXE_WOXXo)
   * Improved JsonAssertion (https://github.com/undera/jmeter-plugins/pull/40)
-  * add __env function (https://github.com/undera/jmeter-plugins/pull/44)
+  * add {{{__env}}} function (https://github.com/undera/jmeter-plugins/pull/44)
   * allow multiline quoted values in VariablesFromCSV config (https://github.com/undera/jmeter-plugins/pull/49)
   * Graphs Generator : New field Output Folder for better control on output of CSV or PNG
   * Graphs Generator : Bug fix on Filter field, default Undefined selection of Combo on Graphs Generator addition lead to empty graphs if not reselected by user, now defaults to empty.
@@ -66,7 +128,7 @@
 == [/downloads/file/JMeterPlugins-1.1.0.zip 1.1.0] <i><font color=gray size="1">July 1, 2013</font></i>==
   * *add [WebDriverSampler WebDriver] sampler*
   * add Loadosophia.org active tests support 
-  * add __chooseRandom function
+  * add {{{__chooseRandom}}} function
   * initial thread burst in stepping thread group ([https://github.com/undera/jmeter-plugins/pull/1 pull request]) 
   * fifo queues capacity limit property introduced
   * add ability to use CMDTool outside lib/ext dir (issue 240)
@@ -226,9 +288,9 @@
   * *[UltimateThreadGroup Ultimate Thread Group], the real killer*
   * *the most wanted [ResponseTimesOverTime Response Times Over Time] Graph*
   * [ThroughputOverTime Transaction Throughput Over Time] Graph
-  * Auto-update GUI for [SteppingThreadGroup Stepping Thread Group] (thanks to St��phane Hoblingre for the patch)
-  * Copy to Clipboard on all graphs (thanks to St��phane Hoblingre for the patch)
-  * Anti-aliasing on all graphs (thanks to St��phane Hoblingre for the patch)
+  * Auto-update GUI for [SteppingThreadGroup Stepping Thread Group] (thanks to St �phane Hoblingre for the patch)
+  * Copy to Clipboard on all graphs (thanks to St �phane Hoblingre for the patch)
+  * Anti-aliasing on all graphs (thanks to St �phane Hoblingre for the patch)
 
 == [/downloads/file/JMeterPlugins-0.2.0.zip 0.2.0] <i><font color=gray size="1">Apr 9, 2010</font></i>==
   * displayable rows selection in [http://code.google.com/p/jmeter-plugins/w/list?q=label:Graph graph listeners]

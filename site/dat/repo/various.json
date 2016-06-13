@@ -1,0 +1,138 @@
+[
+  {
+    "id": "ssh-sampler",
+    "name": "SSH Protocol Support",
+    "description": "",
+    "screenshotUrl": "",
+    "helpUrl": "https://github.com/yciabaud/jmeter-ssh-sampler",
+    "vendor": "Yoann Ciabaud",
+    "markerClass": "org.apache.jmeter.protocol.ssh.sampler.AbstractSSHSampler",
+    "versions": {
+      "1.1.1-SNAPSHOT": {
+        "downloadUrl": "http://jmeter-plugins.org/files/thirdparty/ApacheJMeter_ssh-1.1.1-SNAPSHOT.jar",
+        "libs": {
+          "jsch": "http://search.maven.org/remotecontent?filepath=com/jcraft/jsch/0.1.50/jsch-0.1.50.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "websocket-sampler",
+    "name": "WebSocket Protocol Support",
+    "description": "",
+    "screenshotUrl": "",
+    "helpUrl": "https://github.com/maciejzaleski/JMeter-WebSocketSampler/wiki",
+    "vendor": "Maciej Zaleski",
+    "markerClass": "JMeter.plugins.functional.samplers.websocket.WebSocketSampler",
+    "versions": {
+      "1.0.2-SNAPSHOT": {
+        "downloadUrl": "http://jmeter-plugins.org/files/thirdparty/JMeterWebSocketSampler-1.0.2-SNAPSHOT.jar",
+        "libs": {
+          "jetty-http": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-http/9.1.1.v20140108/jetty-http-9.1.1.v20140108.jar",
+          "jetty-io": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-io/9.1.1.v20140108/jetty-io-9.1.1.v20140108.jar",
+          "jetty-util": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-util/9.1.1.v20140108/jetty-util-9.1.1.v20140108.jar",
+          "websocket-api": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/websocket/websocket-api/9.1.1.v20140108/websocket-api-9.1.1.v20140108.jar",
+          "websocket-client": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/websocket/websocket-client/9.1.1.v20140108/websocket-client-9.1.1.v20140108.jar",
+          "websocket-common": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/websocket/websocket-common/9.1.1.v20140108/websocket-common-9.1.1.v20140108.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "mqtt-sampler",
+    "name": "MQTT Protocol Support",
+    "description": "",
+    "screenshotUrl": "",
+    "helpUrl": "https://github.com/hemikak/mqtt-jmeter",
+    "vendor": "Hemika Kodikara",
+    "markerClass": "org.apache.jmeter.protocol.mqtt.sampler.SubscriberSampler",
+    "versions": {
+      "0.0.1-SNAPSHOT": {
+        "downloadUrl": "http://jmeter-plugins.org/files/thirdparty/mqtt-jmeter-0.0.1-SNAPSHOT.jar",
+        "libs": {
+          "org.eclipse.paho.client.mqttv3": "http://search.maven.org/remotecontent?filepath=org/eclipse/paho/org.eclipse.paho.client.mqttv3/1.0.2/org.eclipse.paho.client.mqttv3-1.0.2.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "netflix-cassandra",
+    "name": "Cassandra Support",
+    "description": "",
+    "screenshotUrl": "",
+    "helpUrl": "https://github.com/Netflix/CassJMeter/wiki",
+    "vendor": "Netflix",
+    "markerClass": "com.netflix.jmeter.sampler.AbstractSampler",
+    "versions": {
+      "0.2-SNAPSHOT": {
+        "downloadUrl": "http://jmeter-plugins.org/files/thirdparty/CassJMeter-0.2-SNAPSHOT.jar",
+        "libs": {
+          "servo-core": "http://search.maven.org/remotecontent?filepath=com/netflix/servo/servo-core/0.4.32/servo-core-0.4.32.jar",
+          "hector-core": "http://search.maven.org/remotecontent?filepath=org/hectorclient/hector-core/1.1-2/hector-core-1.1-2.jar",
+          "astyanax": "http://search.maven.org/remotecontent?filepath=com/netflix/astyanax/astyanax/1.56.25/astyanax-1.56.25.jar",
+          "guava": "http://search.maven.org/remotecontent?filepath=io/janusproject/guava/guava/19.0.0/guava-19.0.0.jar",
+          "cassandra-driver-core": "http://search.maven.org/remotecontent?filepath=com/datastax/cassandra/cassandra-driver-core/1.0.0/cassandra-driver-core-1.0.0.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "kafkameter",
+    "name": "Kafka Support",
+    "description": "",
+    "screenshotUrl": "",
+    "helpUrl": "https://github.com/BrightTag/kafkameter",
+    "vendor": "www.signal.co",
+    "markerClass": "co.signal.kafkameter.KafkaProducerSampler",
+    "versions": {
+      "0.2.0": {
+        "downloadUrl": "http://jmeter-plugins.org/files/thirdparty/kafkameter-0.2.0.jar",
+        "depends": [
+          "jmeter-java"
+        ],
+        "libs": {
+          "guava": "http://search.maven.org/remotecontent?filepath=io/janusproject/guava/guava/19.0.0/guava-19.0.0.jar",
+          "kafka_2.8.2": "http://search.maven.org/remotecontent?filepath=org/apache/kafka/kafka_2.8.2/0.8.0/kafka_2.8.2-0.8.0.jar",
+          "gson": "http://search.maven.org/remotecontent?filepath=com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "custom-soap",
+    "name": "Custom SOAP Sampler",
+    "description": "",
+    "screenshotUrl": "https://camo.githubusercontent.com/439a3066e3d0053d6e9764f8ca82af3a3af9c572/68747470733a2f2f312e62702e626c6f6773706f742e636f6d2f2d536170454572374e3239302f56724e7161495254566d492f41414141414141414864452f5337345753615a37354c452f73313630302f6d61696e566965772e706e67",
+    "helpUrl": "https://github.com/spinning10/JMeterSoapSampler/wiki",
+    "vendor": "Lukasz W",
+    "markerClass": "com.jmeter.protocol.soap.sampler.CustomSOAPSampler",
+    "versions": {
+      "1.3": {
+        "downloadUrl": "http://jmeter-plugins.org/files/thirdparty/CustomSoapSampler-1.3.jar",
+        "depends": [
+          "jmeter-http"
+        ],
+        "libs": {
+          "jpgc-common": "http://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-common/1.4.0/jmeter-plugins-common-1.4.0.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "blazemeter-debugger",
+    "name": "BlazeMeter Step-by-step Debugger",
+    "description": "This plugin enables step-by-step debugging of JMeter scripts",
+    "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/jmeter-debugger/master/src/main/resources/com/blazemeter/jmeter/debugger/logo.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-debugger",
+    "vendor": "BlazeMeter.com",
+    "markerClass": "com.blazemeter.jmeter.debugger.engine.Debugger",
+    "versions": {
+      "0.1": {
+        "downloadUrl": "http://jmeter-plugins.org/files/thirdparty/jmeter-debugger-0.1.jar",
+        "depends": [
+          "jmeter-core"
+        ]
+      }
+    }
+  }
+]

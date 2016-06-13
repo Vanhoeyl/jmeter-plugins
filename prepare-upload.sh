@@ -32,15 +32,25 @@ echo "</body><html>" >> upload/files/coverage/index.html
 mkdir -p upload/files/nightly
 
 for D in `ls` ; do
-    if ls $D/target/JMeterPlugins-*.zip 2>/dev/null ; then
-        cp $D/target/JMeterPlugins-*.zip upload/files/nightly/
+    if ls $D/target/*-*.zip 2>/dev/null ; then
+        cp $D/target/*-*.zip upload/files/nightly/
     fi
 done
 
-PAT="s/.zip/_$REV.zip/"
+cp manager/target/jmeter-plugins-manager-*.jar upload/files/nightly/
+
+PAT="s/.jar/_$REV.jar/"
 rename $PAT upload/files/nightly/*
 
 # examples
 cp -r examples upload/img/
 
-tar -czf upload.tgz upload *.sh
+curl -sS https://getcomposer.org/installer | php
+cd upload
+../composer.phar update --no-dev --prefer-stable
+cp vendor/undera/pwe/.htaccess ./
+cd ..
+
+cd upload
+zip -r site.zip * .htaccess
+cd ..

@@ -4,6 +4,7 @@ Additional plugins for extended and complex testing. Does not require additional
 == Graphs ==
   * [ResponseCodesPerSecond Response Codes per Second]
   * [LatenciesOverTime Response Latencies Over Time]
+  * [ConnectTimeOverTime Connect Times Over Time]
   * [BytesThroughput Bytes Throughput Over Time]
   * [PageDataExtractor Extracted Data Over Time] 
   * [DbMon DbMon Sample Collector]
@@ -27,4 +28,5 @@ Additional plugins for extended and complex testing. Does not require additional
   * [RawDataSource Raw Data Source]
   * [XMLFormatPostProcessor XML Format PostProcessor]
   * [LockFile Lock Files]
-  * [HttpSimpleTableServer HTTP Simple Table Server]
+  * [HttpSimpleTableServer HTTP Simple Table Server] to manage the dataset
+  * [MergeResults Merge Results files] to simplify the comparison of two or more load tests

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "jpgc-standard",
+    "name": "jpgc - Standard Set",
+    "description": "Virtual package, select to install its dependencies",
+    "screenshotUrl": "",
+    "helpUrl": "",
+    "vendor": "JMeter-Plugins.org",
+    "markerClass": null,
+    "versions": {
+      "2.0": {
+        "downloadUrl": null,
+        "depends": [
+          "jpgc-dummy",
+          "jpgc-casutg",
+          "jpgc-tst",
+          "jpgc-graphs-basic",
+          "jpgc-ffw",
+          "jpgc-fifo",
+          "jpgc-perfmon",
+          "jpgc-sense",
+          "jpgc-functions"
+        ]
+      }
+    }
+  }
+]
